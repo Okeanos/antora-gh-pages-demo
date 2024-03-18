@@ -89,3 +89,48 @@ The text at the end of this sentence is cross referenced to <<_third_level_headi
 
 This is a link to the https://docs.asciidoctor.org/home/[Asciidoctor documentation].
 This is an attribute reference {url-quickref}[that links this text to the AsciiDoc Syntax Quick Reference].
+
+== Sample Diagrams
+
+=== Mermaid
+
+== Diagrams
+
+=== Mermaid
+
+[mermaid,test00,svg]
+----
+graph TD
+  A[ Anyone ] -->|Can help | B( Go to github.com/yuzutech/kroki )
+  B --> C{ How to contribute? }
+  C --> D[ Reporting bugs ]
+  C --> E[ Sharing ideas ]
+  C --> F[ Advocating ]
+----
+
+=== C4 PlantUML
+
+[c4plantuml,test01,svg]
+----
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!define FONTAWESOME https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/font-awesome-5
+!include DEVICONS/angular.puml
+!include DEVICONS/java.puml
+!include DEVICONS/msql_server.puml
+!include FONTAWESOME/users.puml
+
+LAYOUT_WITH_LEGEND()
+
+Person(user, "Customer", "People that need products", $sprite="users")
+Container(spa, "SPA", "angular", "The main interface that the customer interacts with", $sprite="angular")
+Container(api, "API", "java", "Handles all business logic", $sprite="java")
+ContainerDb(db, "Database", "Microsoft SQL", "Holds product, order and invoice information", $sprite="msql_server")
+
+Rel(user, spa, "Uses", "https")
+Rel(spa, api, "Uses", "https")
+Rel_R(api, db, "Reads/Writes")
+@enduml
+----

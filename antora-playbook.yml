@@ -71,5 +71,9 @@ antora:
   extensions:
     - '@antora/lunr-extension'
 asciidoc:
+  attributes:
+    kroki-server-url: https://kroki.io
+    kroki-fetch-diagram: true
   extensions:
     - '@asciidoctor/tabs'
+    - 'asciidoctor-kroki'
