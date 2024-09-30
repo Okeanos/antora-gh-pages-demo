@@ -9,7 +9,7 @@
 	editorconfig-checker = "3.0.3"
 	gitleaks = "8.18.4"
 	markdownlint-cli2 = "0.13.0"
-	node = "18"
+	node = "20"
 	shellcheck = "0.10.0"
 	shfmt = "3.9.0"
 	taplo = "0.9.3"
