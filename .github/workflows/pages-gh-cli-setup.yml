@@ -26,25 +26,25 @@ jobs:
       contents: read    # to read the repository itself
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
       - name: Extract Tool Versions
         id: tool-versions
         run: |
           node_version=$(grep -F 'node' .mise.toml | cut -d '=' -f2 | xargs)
           echo "node_version=${node_version}" >> "$GITHUB_OUTPUT"
       - name: Set up NodeJs
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@cdca7365b2dadb8aad0a33bc7601856ffabcc48e # v4
         with:
           node-version: ${{ steps.tool-versions.outputs.node_version }}
       - name: Setup Pages
         id: pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5
       - name: Install Dependencies
         run: npm ci
       - name: Generate Site
         run: npx antora antora-playbook.yml
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: page-artifact
           path: build/site
