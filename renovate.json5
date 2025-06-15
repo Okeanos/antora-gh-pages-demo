@@ -9,9 +9,9 @@
 		{
 			"matchPackageNames": [
 				"node",
-				"nodejs"
+				"nodejs",
 			],
-			"allowedVersions": "<=18"
-		}
-	]
+			"allowedVersions": "<=18",
+		},
+	],
 }
