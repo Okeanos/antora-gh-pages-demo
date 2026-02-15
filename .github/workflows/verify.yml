@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.editorconfig || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Extract Tool Versions
         id: tool-versions
         run: |
@@ -74,7 +74,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.gitleaks || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Extract Tool Versions
         id: tool-versions
         run: |
@@ -96,7 +96,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.lychee || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Extract Tool Versions
         id: tool-versions
         run: |
@@ -120,13 +120,13 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.markdownlint || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - uses: DavidAnson/markdownlint-cli2-action@07035fd053f7be764496c0f8d8f9f41f98305101 # v22.0.0
   shellcheck:
     runs-on: ubuntu-latest
     if: ${{ inputs.shellcheck || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Extract Tool Versions
         id: tool-versions
         run: |
@@ -139,7 +139,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.taplo || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Extract Tool Versions
         id: tool-versions
         run: |
@@ -163,7 +163,7 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ inputs.yamllint || true }}
     steps:
-      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - name: Run yamllint
         run: |
           pip install yamllint
